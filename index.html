@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homework Vue.js - ToDoList</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!--  <div class="header">-->
+  <!--    <div class="container">-->
+  <!--      <div class="logo">ToDo List</div>-->
+  <!--      <div class="form">-->
+  <!--        <input-->
+  <!--          type="text"-->
+  <!--          v-bind:value="valueInput"-->
+  <!--          v-on:input="handleInput"-->
+  <!--          v-on:keypress.enter="addTask"-->
+  <!--        >-->
+  <!--        <button class="btn" v-on:click="addTask">Add a new task</button>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="container">-->
+  <!--    <h2>-->
+  <!--      <span>To Do</span>-->
+  <!--      <span class="mask-num">{{ needDoList.length }}</span>-->
+  <!--    </h2>-->
+  <!--    <ul class="mask-list">-->
+  <!--      <li-->
+  <!--        v-for="(mask, index) in needDoList"-->
+  <!--        :key="mask.id"-->
+  <!--      >-->
+  <!--        <div>-->
+  <!--          <input type="checkbox" v-on:change="doCheck(index, 'need')"/>-->
+  <!--          <span>{{ mask.title }}</span>-->
+  <!--        </div>-->
+  <!--        <button class="btn-remove" v-on:click="removeMask(index, 'need')">Remove</button>-->
+  <!--      </li>-->
+  <!--    </ul>-->
+  <!--    <h2>-->
+  <!--      <span>Done</span>-->
+  <!--      <span class="mask-num">{{ completeList.length }}</span>-->
+  <!--    </h2>-->
+  <!--    <ul class="mask-list complete-list">-->
+  <!--      <li-->
+  <!--        v-for="(mask, index) in completeList"-->
+  <!--        :key="mask.id"-->
+  <!--      >-->
+  <!--        <div>-->
+  <!--          <input type="checkbox" v-on:change="doCheck(index, 'complete')"  checked>-->
+  <!--          <span>{{ mask.title }}</span>-->
+  <!--        </div>-->
+  <!--        <button class="btn-remove" v-on:click="removeMask(index, 'complete')">Remove</button>-->
+  <!--      </li>-->
+  <!--    </ul>-->
+  <!--  </div>-->
+
+  <div class="container">
+    <div class="form">
+      <input type="text">
+      <button class="btn">Add a new task</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>
