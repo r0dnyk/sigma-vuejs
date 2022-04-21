@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="First Name" id="first_name" type="text" class="validate">
+        <label for="first_name"></label>
+      </div>
+      <div class="input-field col s6">
+        <input placeholder="Last Name" id="last_name" type="text" class="validate">
+        <label for="last_name"></label>
+      </div>
+    </div>
+    <p>
+      <label>
+        <input name="group1" type="radio" checked/>
+        <span>Male</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="group1" type="radio"/>
+        <span>Female</span>
+      </label>
+    </p>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Phone number" id="tel" type="tel" class="validate">
+        <label for="tel"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Nickname" id="nickname" type="text" class="validate">
+        <label for="nickname"></label>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>
