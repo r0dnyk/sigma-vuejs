@@ -8,45 +8,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <input placeholder="First Name" id="first_name" type="text" class="validate">
-        <label for="first_name"></label>
+<div class="container" id="app">
+  <div class="row">
+    <form class="col s12" :style="{ backgroundColor: color}">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="First Name" id="first_name" type="text" v-model="first_name" required>
+          <label for="first_name"></label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Last Name" id="last_name" type="text" v-model="last_name" required>
+          <label for="last_name"></label>
+        </div>
       </div>
-      <div class="input-field col s6">
-        <input placeholder="Last Name" id="last_name" type="text" class="validate">
-        <label for="last_name"></label>
+      <p>
+        <label>
+          <input name="gender" type="radio" value="male" @click="toggle" v-model="gender" checked>
+          <span>Male</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="gender" type="radio" value="female" @click="toggle" v-model="gender">
+          <span>Female</span>
+        </label>
+      </p>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Phone number" id="tel" type="tel" v-model="phone" required>
+          <label for="tel"></label>
+        </div>
       </div>
-    </div>
-    <p>
-      <label>
-        <input name="group1" type="radio" checked/>
-        <span>Male</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group1" type="radio"/>
-        <span>Female</span>
-      </label>
-    </p>
-    <div class="row">
-      <div class="input-field col s12">
-        <input placeholder="Phone number" id="tel" type="tel" class="validate">
-        <label for="tel"></label>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Nickname" id="nickname" type="text" v-model="nickname" required>
+          <label for="nickname"></label>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input placeholder="Nickname" id="nickname" type="text" class="validate">
-        <label for="nickname"></label>
-      </div>
-    </div>
-  </form>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Let's go</button>
+    </form>
+    <div class="col l6 s12 warning">{{warning}}</div>
+  </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+<script src="https://unpkg.com/vee-validate@latest"></script>
 <script src="app.js"></script>
 </body>
 </html>
