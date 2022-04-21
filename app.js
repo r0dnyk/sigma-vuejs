@@ -1,14 +1,18 @@
 const App = {
   data () {
     return {
-      new: '',
-      id: 0,
-      list: [{id: this.id++, text: "Learn Vue.js"}]
+      newtask: '',
+      todolist: [{ text: 'Learn Vue.js' }, { text: 'Learn Laravel' }]
     }
   },
   methods: {
-    addItem () {
-
+    addTask () {
+      this.todolist.push({
+        text: this.newTask
+      })
+    },
+    deleteTask (key) {
+      this.todolist.splice(key, 1)
     }
   }
 }
